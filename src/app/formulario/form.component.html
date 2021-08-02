@@ -1,0 +1,31 @@
+<div class="form-group">
+    <label for="programas">Seleccionar Programa o Capacitación</label>
+    <select class="form-control" id="programas" required>
+      <option *ngFor="let prog of programas" [value]="prog">{{prog}}</option>
+    </select>
+
+    <label for="email">Correo Electrónico</label>
+    <br>
+    <input name="email" id="email" required [value]="model.email">
+    <br>
+    <label for="dni">Documento</label>
+    <br>
+    <input name="dni" id="dni" required [value]="model.dni">
+    <br>
+    <label for="sexo">Sexo</label>
+    <br>
+    <mat-radio-group aria-label="Sexo">
+        <mat-radio-button value="1">Hombre</mat-radio-button>
+        <mat-radio-button value="2">Mujer</mat-radio-button>
+      </mat-radio-group>
+    <br>
+    <label for="profesion">Profesión</label>
+    <select class="form-control" id="profesion" required>
+        <option *ngFor="let prof of profesion" [value]="prof">{{prof}}</option>
+    </select>
+    <br>
+    <label for="localidad">Localidad</label>
+    <select class="form-control" id="localidad" required>
+        <option *ngFor="let loc of localidad" [value]="loc">{{loc}}</option>
+    </select>
+</div>    
