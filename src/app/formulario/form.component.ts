@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Formulario } from '../formulario';
+import {FormControl, Validators} from '@angular/forms';
+
 
 @Component({
   selector: 'app-form',
@@ -7,6 +9,8 @@ import { Formulario } from '../formulario';
   styleUrls: ['./form.component.css']
 })
 export class UserFormComponent {
+  programaControl = new FormControl('', Validators.required);
+  programaSelectFormControl = new FormControl('', Validators.required);
 
   programas = ['Programa 1', 'Programa 2'];
 

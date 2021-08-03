@@ -1,0 +1,20 @@
+.form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .form-full-width {
+    width: 100%;
+  }
+
+.form-element {
+    border:1px;
+    border-color:rgb(245, 245, 245);
+    background-color:rgb(245, 245, 245);
+    border-style: solid;
+    padding: 20px;
+    border-radius: 10px;
+    margin-left: 20%;
+    margin-bottom:5%!important;
+}

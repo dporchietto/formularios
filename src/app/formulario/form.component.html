@@ -1,31 +1,75 @@
 <div class="form-group">
-    <label for="programas">Seleccionar Programa o Capacitación</label>
-    <select class="form-control" id="programas" required>
-      <option *ngFor="let prog of programas" [value]="prog">{{prog}}</option>
-    </select>
+  <div class="form-element">
+    <mat-form-field class="form-full-width" appearance="fill">
+      <mat-label>Seleccionar Programa o Capacitación</mat-label>
+      <mat-select required>
+        <mat-option>--</mat-option>
+        <mat-option *ngFor="let prog of programas" [value]="prog">
+          {{prog}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
 
-    <label for="email">Correo Electrónico</label>
+  <div class="form-element">
+    <mat-form-field class="form-full-width" appearance="fill">
+      <mat-label>Email</mat-label>
+      <input type="email" matInput
+             placeholder="Ejemplo: pat@example.com">
+      <mat-hint>Errors appear instantly!</mat-hint>
+      <!-- <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+        Please enter a valid email address
+      </mat-error>
+      <mat-error *ngIf="emailFormControl.hasError('required')">
+        Email is <strong>required</strong>
+      </mat-error> -->
+    </mat-form-field>
+  </div>
+
+
+  <div class="form-element">
+    <mat-form-field class="form-full-width" appearance="fill">
+      <mat-label>Documento</mat-label>
+      <input type="dni" matInput
+             placeholder="Ejemplo: 34689995">
+      <mat-hint>Errors appear instantly!</mat-hint>
+      <!-- <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+        Please enter a valid email address
+      </mat-error>
+      <mat-error *ngIf="emailFormControl.hasError('required')">
+        Email is <strong>required</strong>
+      </mat-error> -->
+    </mat-form-field>
+  </div>
+
+  <div class="form-element">
+    <label class="form-label" for="sexo">Sexo</label>
     <br>
-    <input name="email" id="email" required [value]="model.email">
-    <br>
-    <label for="dni">Documento</label>
-    <br>
-    <input name="dni" id="dni" required [value]="model.dni">
-    <br>
-    <label for="sexo">Sexo</label>
-    <br>
-    <mat-radio-group aria-label="Sexo">
+    <mat-radio-group class="form-input" aria-label="Sexo">
         <mat-radio-button value="1">Hombre</mat-radio-button>
+        <br>
         <mat-radio-button value="2">Mujer</mat-radio-button>
-      </mat-radio-group>
-    <br>
-    <label for="profesion">Profesión</label>
-    <select class="form-control" id="profesion" required>
-        <option *ngFor="let prof of profesion" [value]="prof">{{prof}}</option>
-    </select>
-    <br>
-    <label for="localidad">Localidad</label>
-    <select class="form-control" id="localidad" required>
-        <option *ngFor="let loc of localidad" [value]="loc">{{loc}}</option>
-    </select>
+    </mat-radio-group>
+  </div>
+
+  <div class="form-element">
+    <mat-form-field class="form-full-width" appearance="fill">
+      <mat-label>Profesión</mat-label>
+      <mat-select required>
+        <mat-option>--</mat-option>
+        <mat-option *ngFor="let prof of profesion" [value]="prof">{{prof}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  
+  <div class="form-element">
+    <mat-form-field class="form-full-width" appearance="fill">
+      <mat-label>Localidad</mat-label>
+      <mat-select required>
+        <mat-option>--</mat-option>
+        <mat-option *ngFor="let loc of localidad" [value]="loc">{{loc}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+
 </div>    
