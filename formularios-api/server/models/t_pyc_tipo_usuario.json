@@ -1,0 +1,23 @@
+{
+  "name": "T_PYC_TIPO_USUARIO",
+  "plural": "T_PYC_TIPO_USUARIOS",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "ID_TIPO_USUARIO": {
+      "type": "number",
+      "id": true,
+      "generated":true
+    },
+    "N_TIPO_USUARIO": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

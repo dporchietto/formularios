@@ -1,0 +1,37 @@
+{
+  "name": "T_PYC_CUESTIONARIOS_ANEXO",
+  "plural": "T_PYC_CUESTIONARIOS_ANEXOS",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "ID_CUESTIONARIO_ANEXO": {
+      "type": "number",
+      "id": true,
+      "generated":true
+    },
+    "N_PREGUNTA": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "evento": {
+      "type": "belongsTo",
+      "model": "T_PYC_EVENTOS",
+      "foreignKey": "ID_EVENTOS"
+    }
+  },
+  "acls": [],
+  "methods": {},
+  "foreignKeys": {
+    "ID_EVENTOS": {
+      "name":"ID_EVENTOS",
+      "foreignKey":"ID_EVENTOS",
+      "entityKey":"ID_EVENTO",
+      "entity":"T_PYC_EVENTOS"
+    }
+  }
+}

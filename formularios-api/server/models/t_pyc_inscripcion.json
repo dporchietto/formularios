@@ -1,0 +1,109 @@
+{
+  "name": "T_PYC_INSCRIPCION",
+  "plural": "T_PYC_INSCRIPCIONES",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "ID_INSCRIPCION": {
+      "type": "number",
+      "id": true,
+      "generated":true
+    },
+    "USR_CIDI": {
+      "type": "string",
+      "required": true
+    },
+    "CANAL_COMERC": {
+      "type": "string"
+    },
+    "CUIT_EMPRESA": {
+      "type": "string"
+    },
+    "SUPERFICIE": {
+      "type": "string"
+    },
+    "NIVEL_COBERTURA": {
+      "type": "string"
+    },
+    "MAYORISTA_MINORISTA": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "solicitante": {
+      "type": "belongsTo",
+      "model": "T_PYC_SOLICITANTE",
+      "foreignKey": "ID_SOLICITANTE",
+      "primaryKey":"ID_SOLICITANTE"
+    },
+    "tipo_usuario": {
+      "type": "belongsTo",
+      "model": "T_PYC_TIPO_USUARIO",
+      "foreignKey": "ID_TIPO_USUARIO"
+    },
+    "canales_digitales": {
+      "type": "belongsTo",
+      "model": "T_PYC_CANALES_DIGITALES",
+      "foreignKey": "ID_CANAL_DIGITAL"
+    },
+    "canales_comunicacion": {
+      "type": "belongsTo",
+      "model": "T_PYC_CANALES_COMUNICACION",
+      "foreignKey": "ID_CANAL_COMUNICACION"
+    },
+    "profesion": {
+      "type": "belongsTo",
+      "model": "T_PYC_PROFESION",
+      "foreignKey": "ID_PROFESION"
+    },
+    "eventos": {
+      "type": "belongsTo",
+      "model": "T_PYC_EVENTOS",
+      "foreignKey": "ID_EVENTO"
+    }
+  },
+  "acls": [],
+  "methods": {},
+  "foreignKeys": {
+    "ID_SOLICITANTE": {
+      "name":"ID_SOLICITANTE",
+      "foreignKey":"ID_SOLICITANTE",
+      "entityKey":"ID_SOLICITANTE",
+      "entity":"T_PYC_SOLICITANTE"
+    },
+    "ID_TIPO_USUARIO": {
+      "name":"ID_TIPO_USUARIO",
+      "foreignKey":"ID_TIPO_USUARIO",
+      "entityKey":"ID_TIPO_USUARIO",
+      "entity":"T_PYC_TIPO_USUARIO"
+    },
+    "ID_CANAL_DIGITAL": {
+      "name":"ID_CANAL_DIGITAL",
+      "foreignKey":"ID_CANAL_DIGITAL",
+      "entityKey":"ID_CANAL_DIGITAL",
+      "entity":"T_PYC_CANALES_DIGITALES"
+    },
+    "ID_CANAL_COMUNICACION": {
+      "name":"ID_CANAL_COMUNICACION",
+      "foreignKey":"ID_CANAL_COMUNICACION",
+      "entityKey":"ID_CANAL_COMUNICACION",
+      "entity":"T_PYC_CANALES_COMUNICACION"
+    },
+    "ID_PROFESION": {
+      "name":"ID_PROFESION",
+      "foreignKey":"ID_PROFESION",
+      "entityKey":"ID_PROFESION",
+      "entity":"T_PYC_PROFESION"
+    },
+    "ID_EVENTO": {
+      "name":"ID_EVENTO",
+      "foreignKey":"ID_EVENTO",
+      "entityKey":"ID_EVENTO",
+      "entity":"T_PYC_EVENTOS"
+    }
+  }
+}

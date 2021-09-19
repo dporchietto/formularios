@@ -1,0 +1,34 @@
+{
+  "name": "T_PYC_SOLICITANTE",
+  "plural": "T_PYC_SOLICITANTES",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "ID_SOLICITANTE": {
+      "type": "number",
+      "required": true,
+      "id":true,
+      "generated":true
+    },
+    "DNI": {
+      "type": "number",
+      "required": true
+    },
+    "SEXO": {
+      "type": "string"
+    },
+    "PAI_COD_PAIS": {
+      "type": "string"
+    },
+    "DESCRIPCION": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

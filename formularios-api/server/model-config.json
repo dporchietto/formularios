@@ -1,0 +1,79 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "db",
+    "public":true
+  },
+  "AccessToken": {
+    "dataSource": "db",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "db",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "db",
+    "public": false,
+    "options": {
+      "strictObjectIDCoercion": true
+    }
+  },
+  "Role": {
+    "dataSource": "db",
+    "public": false
+  },
+  "T_PYC_SOLICITANTE": {
+    "dataSource": "cba1_desa",
+    "public": true
+  },
+  "T_PYC_TIPO_USUARIO": {
+    "dataSource": "cba1_desa",
+    "public": true
+  },
+  "T_PYC_CANALES_COMUNICACION": {
+    "dataSource": "cba1_desa",
+    "public": true
+  },
+  "T_PYC_CANALES_DIGITALES": {
+    "dataSource": "cba1_desa",
+    "public": true
+  },
+  "T_PYC_TIPOS_EVENTO": {
+    "dataSource": "cba1_desa",
+    "public": true
+  },
+  "T_PYC_EVENTOS": {
+    "dataSource": "cba1_desa",
+    "public": true
+  },
+  "T_PYC_PROFESION": {
+    "dataSource": "cba1_desa",
+    "public": true
+  },
+  "T_PYC_CUESTIONARIOS_ANEXO": {
+    "dataSource":"cba1_desa",
+    "public":true
+  },
+  "T_PYC_INSCRIPCION": {
+    "dataSource": "cba1_desa",
+    "public": true
+  },
+  "T_PYC_CUESTIONARIO_X_INSCRIPCION": {
+    "dataSource": "cba1_desa",
+    "public": true
+  }
+}

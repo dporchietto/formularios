@@ -1,0 +1,16 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "cba1_desa": {
+    "host": "localhost",
+    "port": 3306,
+    "url": "",
+    "database": "cba1_desa",
+    "password": "testpassword123",
+    "name": "cba1_desa",
+    "user": "root",
+    "connector": "mysql"
+  }
+}

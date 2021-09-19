@@ -1,0 +1,23 @@
+{
+  "name": "T_PYC_PROFESION",
+  "plural": "T_PYC_PROFESIONES",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "ID_PROFESION": {
+      "type": "number",
+      "id":true,
+      "generated":true
+    },
+    "N_PROFESION": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

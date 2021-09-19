@@ -6,7 +6,9 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { UserFormComponent } from './formulario/form.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MaterialModule} from './material.module'
+import { MaterialModule } from './material.module'
+import { HttpClientModule } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,10 @@ import {MaterialModule} from './material.module'
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule,
+    HttpClientModule,
+    Observable
   ],
   providers: [],
   bootstrap: [AppComponent]

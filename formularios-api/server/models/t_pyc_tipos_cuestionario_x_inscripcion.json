@@ -1,0 +1,45 @@
+{
+  "name": "T_PYC_CUESTIONARIO_X_INSCRIPCION",
+  "plural": "T_PYC_CUESTIONARIOS_X_INSCRIPCIONES",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "N_TIPO_EVENTO": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "cuestionario_anexo": {
+      "type": "belongsTo",
+      "model": "T_PYC_CUESTIONARIOS_ANEXO",
+      "foreignKey": "ID_CUESTIONARIO_ANEXO",
+      "primaryKey":"ID_CUESTIONARIO_ANEXO"
+    },
+    "inscripcion": {
+      "type": "belongsTo",
+      "model": "T_PYC_INSCRIPCION",
+      "foreignKey": "ID_INSCRIPCION",
+      "primaryKey":"ID_INSCRIPCION"
+    }
+  },
+  "acls": [],
+  "methods": {},
+  "foreignKeys": {
+    "ID_INSCRIPCION": {
+      "name":"ID_INSCRIPCION",
+      "foreignKey":"ID_INSCRIPCION",
+      "entityKey":"ID_INSCRIPCION",
+      "entity":"T_PYC_INSCRIPCION"
+    },
+    "ID_CUESTIONARIO_ANEXO": {
+      "name":"ID_CUESTIONARIO_ANEXO",
+      "foreignKey":"ID_CUESTIONARIO_ANEXO",
+      "entityKey":"ID_CUESTIONARIO_ANEXO",
+      "entity":"T_PYC_CUESTIONARIOS_ANEXO"
+    }
+  }
+}

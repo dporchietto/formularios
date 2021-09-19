@@ -1,0 +1,25 @@
+{
+  "name": "T_PYC_CANALES_COMUNICACION",
+  "plural": "T_PYC_CANALES_COMUNICACIONES",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "ID_CANAL_COMUNICACION": {
+      "type": "number",
+      "id": true,
+      "generated":true
+    },
+    "N_CANAL_COMUNICACION": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    
+  },
+  "acls": [],
+  "methods": {}
+}

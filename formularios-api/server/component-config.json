@@ -1,0 +1,10 @@
+{
+  "loopback-component-explorer": {
+    "mountPath": "/explorer",
+    "uiDirs": "server/explorer",
+    "apiInfo": {
+      "title": "API GOBCBA",
+      "description": "API de desarrollo app Formularios"
+    }
+  }
+}

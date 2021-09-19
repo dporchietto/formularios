@@ -1,0 +1,56 @@
+{
+  "name": "T_PYC_EVENTOS",
+  "plural": "T_PYC_EVENTOSS",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "ID_EVENTO": {
+      "type": "number",
+      "id":true,
+      "required": true,
+      "generated":true
+    },
+    "N_EVENTO": {
+      "type": "string"
+    },
+    "FEC_INICIO": {
+      "type": "date"
+    },
+    "FEC_VTO_INSCRIPCION": {
+      "type": "date"
+    },
+    "FEC_ALTA": {
+      "type": "date"
+    },
+    "LINK_ACCESO": {
+      "type": "date"
+    },
+    "IMG_EVENTO": {
+      "type": "date"
+    },
+    "FEC_BAJA": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "tipos_evento": {
+      "type": "belongsTo",
+      "model": "T_PYC_TIPOS_EVENTO",
+      "foreignKey": "ID_TIPO_EVENTO"
+    }
+  },
+  "acls": [],
+  "methods": {},
+  "foreignKeys": {
+    "ID_TIPO_EVENTO": {
+      "name":"ID_TIPO_EVENTO",
+      "foreignKey":"ID_TIPO_EVENTO",
+      "entityKey":"ID_TIPO_EVENTO",
+      "entity":"T_PYC_TIPOS_EVENTO"
+    }
+  }
+}
